@@ -9,4 +9,10 @@ def index(request):
 
 
 def create(request):
+    if request.method == 'POST':
+        form = ZoneCreateForm(request.POST)
+        if form.is_valid():
+            return render(request.user)
+            form.save()
+
     return render(request, 'frontend/zone/create.html', {'form': ZoneCreateForm})
