@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
+from .forms import ZoneCreateForm
 
 
 # Create your views here.
@@ -8,4 +9,4 @@ def index(request):
 
 
 def create(request):
-    return render(request, 'frontend/zone/create.html')
+    return render(request, 'frontend/zone/create.html', {'form': ZoneCreateForm})
