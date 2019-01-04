@@ -4,8 +4,8 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    return render(request, 'zone/index.html')
+    return render(request, 'frontend/zone/index.html')
 
 
 def create(request):
-    return render(request, 'zone/create.html')
+    return render(request, 'frontend/zone/create.html')
